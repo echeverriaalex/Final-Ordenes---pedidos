@@ -4,7 +4,7 @@
 <main class="py-5">
      <section id="listado" class="mb-5">
           <div class="container">
-               <h2 class="mb-4">Listado de Ordenes</h2>
+               <h2 class="mb-4">Listado de Ordenes pendientes</h2>
                <table class="table bg-light-alpha">
                     <thead>                         
                          <th>Código</th>

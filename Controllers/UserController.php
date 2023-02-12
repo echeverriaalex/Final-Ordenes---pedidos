@@ -25,7 +25,7 @@
 
                     $_SESSION['user'] = $user;
                     $orderController = new OrderController();
-                    $orderController->ShowListView();
+                    $orderController->ShowListOrderPendingView();
                 }
             }else{
                 echo "<script> alert('El email o la contraseña es incorrecta. Reintete.'); </script>";

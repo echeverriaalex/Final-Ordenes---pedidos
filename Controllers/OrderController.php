@@ -15,7 +15,7 @@ use DAO\OrderStatusDAO;
             $this->orderStatusDAO = new OrderStatusDAO();
         }
 
-        public function ShowListView(){
+        public function ShowListOrderPendingView(){
 
             if($_SESSION){
                 $orderStatusList = $this->orderStatusDAO->GetAll();
@@ -47,6 +47,18 @@ use DAO\OrderStatusDAO;
             }            
         }
 
+        public function ShowListAllOrderView(){
+
+            if($_SESSION){
+                $orderStatusList = $this->orderStatusDAO->GetAll();
+                $ordersPendingList = $this->orderDAO->GetAll();
+                require_once(VIEWS_PATH."order-list.php");
+            }
+            else{
+                header('location: ../Home/Index');
+            }  
+        }
+
         public function ShowAddView(){
             if($_SESSION != null){
                 $orderStatusList = $this->orderStatusDAO->GetAll();       
@@ -72,7 +84,7 @@ use DAO\OrderStatusDAO;
         public function Delete($orderId){
             $this->orderDAO->Delete($orderId);
             echo "<script> alert('Orden eliminada con exito'); </script>";
-            $this->ShowListView();
+            $this->ShowListAllOrderView();
         }
     }
 ?>
