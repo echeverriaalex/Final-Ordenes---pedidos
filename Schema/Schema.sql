@@ -41,12 +41,17 @@ VALUES
     
 delete from orders;
 insert into orders(orderId, orderStatusId,description,price) 
-	values (1,1,"orden pendiente 1", 4000), (2,1,"orden pendiente 2", 5000),(3,1,"orden pendiente 3", 6000);
-
-delete from orders;
+	values 	(1,1,"rabas con papas fritas y coca cola", 4500), 
+			(2,1,"milanesa con pure de papas y sprite", 2300),
+            (3,1,"spaghettis con mariscos y agua", 3000),
+			(4,2,"hamburguesa con papas", 600),
+            (5,2,"sandwitch de lomito ", 700),
+            (6,2,"hamburguesa con ensalada", 570),
+            (7,3,"choripan", 300),
+            (8,3,"bondiola con papas", 780),
+            (9,3,"pechuga con ensalada", 450);
 select  * from orders;
 
 select * from orderstatus;
-
     
 select * from users;
