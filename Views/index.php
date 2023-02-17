@@ -5,9 +5,9 @@
           </header>
 
           <?php 
-               //echo ROOT;
-               //echo "<br>";
-               //echo FRONT_ROOT;
+               echo "<br>Estos son los usuarios registrados con sus contraseñas:";
+               echo "<br>user@myapp.com 123456";
+               echo "<br>final@myapp.com 123456";
           ?>
 
           <form action="<?php echo FRONT_ROOT?>/User/Login" method="" class="login-form bg-dark-alpha p-5 bg-light">
